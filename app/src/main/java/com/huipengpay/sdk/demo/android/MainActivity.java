@@ -2,15 +2,22 @@ package com.huipengpay.sdk.demo.android;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.EditText;
-import org.springframework.http.converter.StringHttpMessageConverter;
+import com.alibaba.fastjson.JSON;
+import com.citicbank.cyberpay.assist.main.CyberPay;
+import com.citicbank.cyberpay.assist.main.CyberPayListener;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends Activity {
+
 
 
     @Override
@@ -25,22 +32,57 @@ public class MainActivity extends Activity {
     }
 
     public void eciticClick(View view) {
-        final EditText payMoneyView = (EditText) findViewById(R.id.payMoney);
-
-        String url = "http://192.168.8.254:8080/pay";
-
-        RestTemplate restTemplate = new RestTemplate();
-
-        restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
-
-        HashMap<String,Object> map = new HashMap<>();
-        map.put("pay_interface","ECITIC_APP");
-        map.put("order_describe","abc");
-        map.put("order_amount",new BigDecimal(payMoneyView.getText().toString()));
-
-        String result = restTemplate.postForObject(url,map,String.class);
-
+        new Thread(runnable).start();
     }
 
+
+    Runnable runnable = new Runnable() {
+        public void run() {
+            // TODO: http request.
+
+            final EditText payMoneyView = (EditText) findViewById(R.id.payMoney);
+
+            String url = "http://192.168.8.254:8080/pay";
+
+            RestTemplate restTemplate = new RestTemplate();
+
+            MultiValueMap<String,String> map = new LinkedMultiValueMap<String,String>();
+            map.add("pay_interface","ECITIC_APP");
+            map.add("order_describe","abc");
+            map.add("order_amount",payMoneyView.getText().toString());
+
+            String postForObject = restTemplate.postForObject(url, map, String.class);
+
+            goToCyberPay(JSON.parseObject(postForObject,Map.class));
+
+            Message msg = new Message();
+            Bundle data = new Bundle();
+            data.putString("value","请求结果");
+            msg.setData(data);
+            handler.sendMessage(msg);
+        }
+    };
+
+
+    private void goToCyberPay(Map payResponse){
+        CyberPayListener cyberPayListener = new CyberPayListener() {
+            public void onPayEnd(String s) {
+
+            }
+        };
+        CyberPay cyberPay = new CyberPay(getApplication());
+        cyberPay.registerCallback(cyberPayListener);
+        Map extra =  (Map)payResponse.get("extra");
+        Map<String,String> payRequest = new HashMap<String,String>();
+        payRequest.put("MERID",(String) extra.get("MERID"));
+        payRequest.put("ORDERNO",(String) extra.get("ORDERNO"));
+
+        cyberPay.pay(this,JSON.toJSONString(payRequest));
+    }
+
+
+    Handler handler = new Handler(){
+
+    };
 
 }
