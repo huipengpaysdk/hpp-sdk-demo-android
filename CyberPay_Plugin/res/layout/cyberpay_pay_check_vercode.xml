@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" >
+
+    <Button
+        android:id="@+id/id_common_check_vercode_btn_get_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/cyberpay_btn_gray_big"
+        android:gravity="center"
+        android:text="@string/cyberpay_common_get_vercode"
+        android:textColor="@color/cyberpay_text_blue_color" />
+
+    <EditText
+        android:id="@+id/id_edt_card_validno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/id_common_check_vercode_btn_get_code"
+        android:background="@drawable/cyberpay_editext_background"
+        android:drawableLeft="@drawable/cyberpay_yzm"
+        android:hint="@string/cyberpay_validno_hint"
+        android:inputType="number"
+        android:maxLength="6"
+        android:singleLine="true"
+        android:textColor="@color/cyberpay_text_black_color"
+        android:textSize="@dimen/cyberpay_main_second_title" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/keyboard_char_main_bg"></item>
+    <item>
+        <bitmap android:src="@drawable/fw_kb_backspace_normal_nine" android:gravity="center"></bitmap>
+    </item>
+</layer-list>

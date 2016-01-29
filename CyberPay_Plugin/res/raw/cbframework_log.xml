@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<logger>
+
+		<level>DEBUG,INFO,ERROR</level>
+		<maxRecord>50</maxRecord>
+		<format>[%p]--[%d]%f#%l %m</format>
+
+		<isConsoleLog>true</isConsoleLog>
+
+		<isFileLog>false</isFileLog>
+		<logFileName>debug</logFileName> 
+		<logSize>2048</logSize>
+		<maxBackupNum>200</maxBackupNum>
+
+	</logger>
+</config>

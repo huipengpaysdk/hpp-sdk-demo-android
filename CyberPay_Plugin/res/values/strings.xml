@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cyberpay_app_name">异度支付</string>
+    <string name="cyberpay_common_cancel">取消</string>
+    <string name="cyberpay_common_ok">确定</string>
+    <string name="cyberpay_pay_loading_text">正在加载，请稍候...</string>
+    <string name="cyberpay_common_next">下一步</string>
+    <string name="cyberpay_okpay">确认付款</string>
+    <string name="cyberpay_moresupportbank">查看支持银行列表</string>
+    <string name="cyberpay_pay_common_supportbanks">支持银行列表</string>
+    <string name="cyberpay_pay_search_banks">搜索银行</string>
+    <string name="cyberpay_checktopmoney">限额查询</string>
+    <string name="cyberpay_order_document">订单描述：</string>
+    <string name="cyberpay_order_paymoney">应付金额：</string>
+    <string name="cyberpay_order_payeename">商户名称：</string>
+    <string name="cyberpay_order_orderno">订单号码：</string>
+    <string name="cyberpay_order_ordertime">订单时间：</string>
+    <string name="cyberpay_order_tips">温馨提示</string>
+    <string name="cyberpay_order_tips2">您的银行卡可在银行柜台、网银或银联在线网站上开通银联无卡业务，预留正确手机号。</string>
+    <string name="cyberpay_common_get_vercode">获取验证码</string>
+    <string name="cyberpay_inputcardinfo_modifyphone">修改手机号</string>
+    <string name="cyberpay_pay_common_card_getsms_time">%1$s秒重新获取</string>
+    <string name="cyberpay_pay_error_mobilefalse">手机号码有误，请重新输入</string>
+    <string name="cyberpay_pay_error_mobilenull">请输入银行卡预留手机号</string>
+    <string name="cyberpay_validno_hint">短信验证码</string>
+    <string name="cyberpay_card_validdate_hint">信用卡有效期 示例1017</string>
+    <string name="cyberpay_card_cvn_hint">银行卡背面后三位数字</string>
+    <string name="cyberpay_card_phone_hint">银行预留手机号</string>
+    <string name="cyberpay_card_password_hint">银行卡交易密码</string>
+    <string name="cyberpay_card_savecommonbank">保存为常用银行卡</string>
+    <string name="cyberpay_pay_money">%1$s </string>
+    <string name="cyberpay_error_input_cardno">请输入银行卡卡号</string>
+    <string name="cyberpay_error_input_cardno_error">银行卡卡号有误，请重新输入。</string>
+    <string name="cyberpay_error_input_cardno_count_error">银行卡号位数错误，应该为13～19位！</string>
+    <string name="cyberpay_pay_limitquery_cardmoney_dialog">付款卡已超过日累计支付限额，请更换银行卡付款或明日使用本卡再试。</string>
+    <string name="cyberpay_pay_limitquery_cardnumber">%1$s %2$s</string>
+    <string name="cyberpay_pay_limitquery_cardtishi">提示：非中信银行卡消费限额受发卡行银联无卡支付限额限制</string>
+    <string name="cyberpay_pay_limitquery_cardmoney_citichave">今日已消费%1$s单笔限额为%2$s每日累计限额为%3$s元</string>
+    <string name="cyberpay_pay_common_payend_success">付款成功！</string>
+    <string name="cyberpay_pay_payend_back">返回商户</string>
+
+</resources>

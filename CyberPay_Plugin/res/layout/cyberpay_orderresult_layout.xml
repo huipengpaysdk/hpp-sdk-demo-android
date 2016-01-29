@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/cyberpay_style_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fafafa"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cyberpay_order_payeename"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+
+        <TextView
+            android:id="@+id/id_txt_ru_order_mername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cyberpay_style_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fafafa"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cyberpay_order_ordertime"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+
+        <TextView
+            android:id="@+id/id_txt_ru_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cyberpay_style_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fafafa"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cyberpay_order_orderno"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+
+        <TextView
+            android:id="@+id/id_txt_ru_order_orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cyberpay_style_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fafafa"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cyberpay_order_paymoney"
+            android:textColor="@color/cyberpay_text_black_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+
+        <TextView
+            android:id="@+id/id_txt_ru_order_paymoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/cyberpay_text_orderjine_color"
+            android:textSize="@dimen/cyberpay_main_second_title" />
+    </LinearLayout>
+
+</LinearLayout>

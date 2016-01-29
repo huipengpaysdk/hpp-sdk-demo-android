@@ -5,3 +5,11 @@
 .DS_Store
 /build
 /captures
+
+.settings
+/CyberPay_Plugin/build
+/CyberPay_Plugin/bin
+/CyberPay_Plugin/gen
+.classpath
+.project
+project.properties

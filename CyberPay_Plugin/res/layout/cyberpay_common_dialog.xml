@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="300dp"
+    android:background="@drawable/cyberpay_dialog_bg2"
+    android:padding="20dp">
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="15dp">
+	    <ImageView android:id="@+id/id_common_dialog_icon" android:layout_width="fill_parent" android:scaleType="centerInside"
+	        android:layout_height="wrap_content" android:src="@drawable/cyberpay_popup_success" android:layout_gravity="center" android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+	    <TextView
+	        android:id="@+id/id_common_dialog_msg"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:minLines="2"
+	        android:text="测试测试"
+	        android:textColor="@color/cyberpay_dialog_msg_color"
+	        android:textSize="@dimen/cyberpay_main_second_title"
+	        />
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+	       >
+
+	        <Button
+	            android:id="@+id/id_common_dialog_btn_ok"
+	            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+	            style="@style/cyberpay_style_green_btn" android:visibility="gone"/>
+
+	        <Button
+	            android:id="@+id/id_common_dialog_btn_cancel"
+	            android:layout_marginLeft="10dp"
+	            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+	            android:text="@string/cyberpay_common_cancel" style="@style/cyberpay_style_gray_btn" android:visibility="gone"/>
+	   
+	        <Button
+	            android:id="@+id/id_common_dialog_btn_cancel_black"
+	            android:layout_marginLeft="10dp"
+	            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+	            android:text="@string/cyberpay_common_cancel" style="@style/cyberpay_style_black_btn" android:visibility="gone"/>
+	   </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

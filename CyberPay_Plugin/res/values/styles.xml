@@ -1,0 +1,111 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowAnimationStyle">@style/CyberAnimation.Activity</item>
+    </style>
+
+    <style name="cyberpay_app_new_bg">
+        <item name="android:background">@color/cyberpay_app_new_bg</item>
+    </style>
+
+    <style name="cyberpay_popAnimation" parent="android:Animation">
+        <item name="android:windowExitAnimation">@anim/fw_pop_out</item>
+    </style>
+
+    <style name="CyberAnimation.Activity" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/cyberpay_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/cyberpay_slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/cyberpay_slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/cyberpay_slide_right_out</item>
+    </style>
+
+    <style name="cyberpay_theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/cyberpay_bg_dialog</item>
+    </style>
+
+    <style name="cyberpay_style_base_btn">
+        <item name="android:textSize">@dimen/cyberpay_main_second_title</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="cyberpay_style_green_btn" parent="cyberpay_style_base_btn">
+        <item name="android:textColor">@color/cyberpay_text_white_color</item>
+        <item name="android:background">@drawable/cyberpay_btn_green_big</item>
+    </style>
+
+    <style name="cyberpay_style_gray_btn" parent="cyberpay_style_base_btn">
+        <item name="android:textColor">@color/cyberpay_text_blue_color</item>
+        <item name="android:background">@drawable/cyberpay_btn_gray_big</item>
+    </style>
+
+    <style name="cyberpay_style_black_btn" parent="cyberpay_style_base_btn">
+        <item name="android:textColor">@color/cyberpay_text_black_color</item>
+        <item name="android:background">@drawable/cyberpay_gray_btn_big</item>
+    </style>
+
+    <style name="cyberpay_style_header_title">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">@dimen/cyberpay_main_first_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cyberpay_text_blue_color</item>
+    </style>
+
+    <style name="cyberpay_style_linearlayout">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="cyberpay_style_posandtaxi">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/cyberpay_text_blue_color</item>
+        <item name="android:textSize">@dimen/cyberpay_main_second_title</item>
+    </style>
+
+    <style name="cyberpay_style_newpay_cardstyle" parent="cyberpay_style_posandtaxi">
+        <item name="android:paddingLeft">@dimen/cyberpay_title_margin_left_right</item>
+        <item name="android:paddingRight">@dimen/cyberpay_title_margin_left_right</item>
+        <item name="android:textColor">@color/cyberpay_text_black_color</item>
+        <item name="android:textSize">@dimen/cyberpay_main_second_title</item>
+    </style>
+
+    <style name="cyberpay_style_newpay_cardtextstyle" parent="cyberpay_style_posandtaxi">
+        <item name="android:textColor">@color/cyberpay_text_black_color</item>
+        <item name="android:textSize">@dimen/cyberpay_main_second_title</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="cyberpay_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/cyberpay_pop_bg</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="cyberpay_style_listView">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:listSelector">@color/cyberpay_transparence</item>
+        <item name="android:divider">@color/cyberpay_item_divider_color</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:cacheColorHint">@color/cyberpay_transparence</item>
+        <item name="android:fadingEdge">@color/cyberpay_transparence</item>
+    </style>
+
+</resources>

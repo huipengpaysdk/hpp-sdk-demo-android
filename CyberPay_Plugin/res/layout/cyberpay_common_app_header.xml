@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cyberpay_common_header"
+    android:gravity="center" >
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/id_common_footer_img_back" -->
+    <!-- android:layout_width="40dip" -->
+    <!-- android:layout_height="40dip" -->
+    <!-- android:padding="10dip" -->
+    <!-- android:scaleType="fitXY" -->
+    <!-- android:src="@drawable/cyberpay_webview_back" -->
+    <!-- android:visibility="gone" /> -->
+
+    <TextView
+        android:id="@+id/id_common_header_txt_title"
+        style="@style/cyberpay_style_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+</LinearLayout>

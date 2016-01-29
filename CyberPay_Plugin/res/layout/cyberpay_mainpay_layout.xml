@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cyberpay_app_new_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cyberpay_common_app_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/id_payinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include layout="@layout/cyberpay_orderinfo_layout" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cyberpay_bg_orderinfo" />
+
+                <include
+                    android:id="@+id/id_paybankinfo"
+                    layout="@layout/cyberpay_paybankcardinfo_layout" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_supportbanklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/id_payinfo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/cyberpay_moresupportbank"
+                android:textColor="@color/cyberpay_text_blue_color"
+                android:textSize="@dimen/cyberpay_main_second_title" />
+
+            <TextView
+                android:id="@+id/txt_limitmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/id_payinfo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/cyberpay_checktopmoney"
+                android:textColor="@color/cyberpay_text_blue_color"
+                android:textSize="@dimen/cyberpay_main_second_title" />
+
+            <Button
+                android:id="@+id/id_btn_footer_green"
+                style="@style/cyberpay_style_green_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/cyberpay_btn_common_height"
+                android:layout_below="@id/txt_limitmoney"
+                android:layout_marginLeft="@dimen/cyberpay_title_margin_left_right"
+                android:layout_marginRight="@dimen/cyberpay_title_margin_left_right"
+                android:layout_marginTop="@dimen/cyberpay_button_margintop_height"
+                android:text="@string/cyberpay_common_next" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

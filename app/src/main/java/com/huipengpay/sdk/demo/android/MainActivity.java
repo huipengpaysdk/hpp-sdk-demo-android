@@ -55,11 +55,7 @@ public class MainActivity extends Activity {
 
             goToCyberPay(JSON.parseObject(postForObject,Map.class));
 
-            Message msg = new Message();
-            Bundle data = new Bundle();
-            data.putString("value","请求结果");
-            msg.setData(data);
-            handler.sendMessage(msg);
+
         }
     };
 
@@ -67,7 +63,11 @@ public class MainActivity extends Activity {
     private void goToCyberPay(Map payResponse){
         CyberPayListener cyberPayListener = new CyberPayListener() {
             public void onPayEnd(String s) {
-
+                Message msg = new Message();
+                Bundle data = new Bundle();
+                data.putString("value",s);
+                msg.setData(data);
+                handler.sendMessage(msg);
             }
         };
         CyberPay cyberPay = new CyberPay(getApplication());

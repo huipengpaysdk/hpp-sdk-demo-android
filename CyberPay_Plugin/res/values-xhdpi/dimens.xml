@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_padding_outer">2.0dip</dimen>
+    <dimen name="cyberpay_qrcode_detail_label">20.0sp</dimen>
+</resources>

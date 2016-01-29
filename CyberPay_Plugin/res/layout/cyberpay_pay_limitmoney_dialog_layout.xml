@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="@dimen/cyberpay_dialog_item_split_marginleft"
+    android:layout_marginRight="@dimen/cyberpay_dialog_item_split_marginleft"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_limit_cardnumber"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/cyberpay_item_height"
+        android:gravity="center"
+        android:text="@string/cyberpay_pay_limitquery_cardnumber"
+        android:textColor="#000000"
+        android:textSize="@dimen/cyberpay_main_second_title" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/cyberpay_item_divider_color" />
+
+    <TextView
+        android:id="@+id/txt_limit_cardmoney"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/cyberpay_main_second_title" />
+
+    <LinearLayout
+        android:id="@+id/linear_limit_tishi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/cyberpay_item_divider_color" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cyberpay_pay_limitquery_cardtishi"
+            android:textColor="#000000"
+            android:textSize="@dimen/cyberpay_main_document_title" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ok"
+        style="@style/cyberpay_style_green_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cyberpay_common_ok" />
+
+</LinearLayout>

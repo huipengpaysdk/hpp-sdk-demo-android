@@ -1,0 +1,35 @@
+<resources>
+
+    <dimen name="cyberpay_main_layout_padding_left">8.0dip</dimen>
+    <dimen name="cyberpay_main_layout_padding_right">8.0dip</dimen>
+    <dimen name="cyberpay_main_layout_padding_top">8.0dip</dimen>
+    <dimen name="cyberpay_main_layout_padding_bottom">8.0dip</dimen>
+    <dimen name="cyberpay_view_back_padding_bottom">16.0dip</dimen>
+    <dimen name="cyberpay_line_space">10.0dip</dimen>
+    <dimen name="cyberpay_header_title_margin_top">24.0dip</dimen>
+    <dimen name="cyberpay_header_title_margin_bottom">24.0dip</dimen>
+    <dimen name="cyberpay_input_padding_top">10.0dip</dimen>
+    <dimen name="cyberpay_input_padding_bottom">10.0dip</dimen>
+    <dimen name="cyberpay_input_padding_left">5.0dip</dimen>
+    <dimen name="cyberpay_input_padding_right">5.0dip</dimen>
+    <dimen name="cyberpay_input_height">50.0dip</dimen>
+    <dimen name="cyberpay_btn_common_height">50.0dip</dimen>
+    <dimen name="key_padding_outer">2.0dip</dimen>
+    <dimen name="cyberpay_main_first_title">20sp</dimen>
+    <dimen name="cyberpay_main_second_title">16sp</dimen>
+    <dimen name="cyberpay_main_contend">11sp</dimen>
+    <dimen name="cyberpay_fw_key_textSize">20px</dimen>
+    <dimen name="cyberpay_fw_operkey_textSize">18px</dimen>
+    <dimen name="cyberpay_title_split_height">15dp</dimen>
+    <dimen name="cyberpay_button_margintop_height">25dp</dimen>
+    <dimen name="cyberpay_title_margin_left_right">10dp</dimen>
+    <dimen name="cyberpay_title_split_content_height">5dp</dimen>
+    <dimen name="cyberpay_content_margin_left_right">15dp</dimen>
+    <dimen name="cyberpay_item_height">44dp</dimen>
+    <dimen name="cyberpay_dialog_item_split_height">61dp</dimen>
+    <dimen name="cyberpay_dialog_item_split_marginleft">16dp</dimen>
+    <dimen name="cyberpay_main_document_title">14sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

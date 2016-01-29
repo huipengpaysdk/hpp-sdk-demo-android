@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cyberpay_transparence">#00000000</color>
+    <color name="cyberpay_text_white_color">#ffffff</color>
+    <color name="cyberpay_text_gray_color">#c1c1c1</color>
+    <color name="cyberpay_text_blue_color">#005aa0</color>
+    <color name="cyberpay_text_green_color">#509632</color>
+    <color name="cyberpay_text_ordertitle_color">#0E672F</color>
+    <color name="cyberpay_text_orderjine_color">#FE7609</color>
+    <color name="cyberpay_text_black_color">#333333</color>
+    <color name="cyberpay_text_red_color">#8c1414</color>
+    <color name="cyberpay_text_dark_red_color">#ca4c51</color>
+    <color name="cyberpay_soft_guide_button_bg">#90A945</color>
+    <color name="cyberpay_item_divider_color">#c6bbbc</color>
+    <color name="cyberpay_dialog_msg_color">#333333</color>
+    <color name="cyberpay_trade_bg_blue">#3776BE</color>
+    <color name="cyberpay_trade_bg_green">#6FBA57</color>
+    <color name="cyberpay_trade_bg_yellow">#EC7E3A</color>
+    <color name="cyberpay_trade_bg_red">#BE213B</color>
+    <color name="cyberpay_trade_line_bg1">#fff1f1f1</color>
+    <color name="cyberpay_trade_line_bg">#ffd8d8d8</color>
+    <color name="cyberpay_app_new_bg">#f0f0f0</color>
+    <color name="cyberpay_text_document_color">#a5a5a5</color>
+    <color name="cyberpay_line_split_bg">#f0f0f0</color>
+    <color name="maskColor">#60000000</color>
+    <color name="frameColor">#15AAFE</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#15AAFE</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="keyboard_bg">#FFD0D4D8</color>
+    <color name="keyboard_char_main_bg">#3270b4</color>
+    <color name="keyboard_char_btn_bg">#f7f8f9</color>
+    <color name="keyboard_num_gong_splitline_bg">#c1c3c7</color>
+
+</resources>
