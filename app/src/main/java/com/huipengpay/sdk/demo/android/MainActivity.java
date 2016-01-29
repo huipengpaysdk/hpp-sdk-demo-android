@@ -18,70 +18,54 @@ import java.util.Map;
 
 public class MainActivity extends Activity {
 
-
+    private CyberPay mCyberPay;
+    private EditText payMoneyView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+        mCyberPay = new CyberPay(getApplication());
+        payMoneyView = (EditText) findViewById(R.id.payMoney);
     }
 
     public void eciticClick(View view) {
-        new Thread(runnable).start();
+        String url = "http://192.168.8.254:8080/pay";
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
+        map.add("pay_interface", "ECITIC_APP");
+        map.add("order_describe", "abc");
+        map.add("order_amount", payMoneyView.getText().toString());
+
+        String postForObject = restTemplate.postForObject(url, map, String.class);
+
+        goToCyberPay(JSON.parseObject(postForObject, Map.class));
     }
 
 
-    Runnable runnable = new Runnable() {
-        public void run() {
-            // TODO: http request.
-
-            final EditText payMoneyView = (EditText) findViewById(R.id.payMoney);
-
-            String url = "http://192.168.8.254:8080/pay";
-
-            RestTemplate restTemplate = new RestTemplate();
-
-            MultiValueMap<String,String> map = new LinkedMultiValueMap<String,String>();
-            map.add("pay_interface","ECITIC_APP");
-            map.add("order_describe","abc");
-            map.add("order_amount",payMoneyView.getText().toString());
-
-            String postForObject = restTemplate.postForObject(url, map, String.class);
-
-            goToCyberPay(JSON.parseObject(postForObject,Map.class));
-
-
-        }
-    };
-
-
-    private void goToCyberPay(Map payResponse){
+    private void goToCyberPay(Map payResponse) {
         CyberPayListener cyberPayListener = new CyberPayListener() {
             public void onPayEnd(String s) {
                 Message msg = new Message();
                 Bundle data = new Bundle();
-                data.putString("value",s);
+                data.putString("value", s);
                 msg.setData(data);
-                handler.sendMessage(msg);
             }
         };
-        CyberPay cyberPay = new CyberPay(getApplication());
-        cyberPay.registerCallback(cyberPayListener);
-        Map extra =  (Map)payResponse.get("extra");
-        Map<String,String> payRequest = new HashMap<String,String>();
-        payRequest.put("MERID",(String) extra.get("MERID"));
-        payRequest.put("ORDERNO",(String) extra.get("ORDERNO"));
+        mCyberPay.registerCallback(cyberPayListener);
+        Map extra = (Map) payResponse.get("extra");
+        Map<String, String> payRequest = new HashMap<>();
+        payRequest.put("MERID", (String) extra.get("MERID"));
+        payRequest.put("ORDERNO", (String) extra.get("ORDERNO"));
 
-        cyberPay.pay(this,JSON.toJSONString(payRequest));
+        mCyberPay.pay(this, JSON.toJSONString(payRequest));
     }
 
 
-    Handler handler = new Handler(){
+    Handler handler = new Handler() {
 
     };
 
