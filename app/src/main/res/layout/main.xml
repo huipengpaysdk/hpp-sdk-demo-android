@@ -13,5 +13,5 @@
     <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
     android:numeric="integer" android:id="@+id/payMoney"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="使用中信异度支付" android:id="@+id/btn_ecitic" android:onClick="eciticClick"/>
-    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="使用微信支付" android:id="@+id/btn_weixin"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="使用微信支付" android:id="@+id/btn_weixin" android:onClick="winxinClick"/>
 </LinearLayout>
