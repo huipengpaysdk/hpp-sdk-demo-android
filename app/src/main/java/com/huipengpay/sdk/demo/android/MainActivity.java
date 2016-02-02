@@ -2,6 +2,7 @@ package com.huipengpay.sdk.demo.android;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -39,18 +40,21 @@ public class MainActivity extends Activity {
     }
 
     public void eciticClick(View view) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                String postForObject = postForObject("ECITIC_APP");
-
-                Assert.notNull(postForObject);
-
-                goToCyberPay(JSON.parseObject(postForObject,Map.class));
-            }
-        }).start();
+        new Thread(eciticRun).start();
     }
+
+    Runnable eciticRun = new Runnable() {
+        @Override
+        public void run() {
+            Looper.prepare();
+            String postForObject = postForObject("ECITIC_APP");
+
+            Assert.notNull(postForObject);
+
+            goToCyberPay(JSON.parseObject(postForObject,Map.class));
+            Looper.loop();
+        }
+    };
 
     private String postForObject(String payInterface){
 
@@ -74,21 +78,23 @@ public class MainActivity extends Activity {
         return null;
     }
 
+
     private void goToCyberPay(Map payResponse){
-        CyberPayListener cyberPayListener = new CyberPayListener() {
-            public void onPayEnd(String s) {
-                Log.d("CyberPayEnd...",s);
-            }
-        };
         CyberPay cyberPay = new CyberPay(getApplication());
         cyberPay.registerCallback(cyberPayListener);
         Map extra =  (Map)payResponse.get("extra");
         Map<String,String> payRequest = new HashMap<String,String>();
         payRequest.put("MERID",(String) extra.get("MERID"));
         payRequest.put("ORDERNO",(String) extra.get("ORDERNO"));
-
         cyberPay.pay(this,JSON.toJSONString(payRequest));
     }
+
+
+    private CyberPayListener cyberPayListener = new CyberPayListener() {
+        public void onPayEnd(String s) {
+            Log.d("CyberPayEnd...",s);
+        }
+    };
 
     public void winxinClick(View view){
         new Thread(new Runnable() {
